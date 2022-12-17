@@ -13,7 +13,6 @@ const CreateGroupPage = () => {
     return ( 
 
         <div className="CreateGroupPage">
-            <h1>NAVBAR</h1>
             <h1>CARROSSEL</h1>
             <div className="container-fluid">
                 <h1>CRIE SEU GRUPO</h1>
