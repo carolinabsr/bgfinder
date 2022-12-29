@@ -13,35 +13,84 @@ const CreateGroupPage = () => {
     return ( 
 
         <div className="CreateGroupPage">
-            <h1>NAVBAR</h1>
             <h1>CARROSSEL</h1>
             <div className="container-fluid">
                 <h1>CRIE SEU GRUPO</h1>
             </div>
 
-            <div class="container text-center">
+            <div className="container text-center">
                 <div class="row">
-                    <div class="col-6">
-                        <p>Nome do grupo:</p>
-                        <input type='text'></input>
-                        <p>Criado por:</p>
-                        <input type='text'></input>
-                        <p>Nome do jogo:</p>
-                        <input type='text'></input>
-                        <p>Jogadores necessários :</p>
-                        <input type='number'></input>
-                        <p>Disponibilidade:</p>
-                        <input type='datetime-local'></input>
+
+                    <div className="col-6">
+
+                        <div className="col-md-6">
+                            <label for="formGroupExampleInput" className="form-label">Nome do grupo:</label>
+                            <input type="text" className="form-control" id="formGroupExampleInput"/>
+                        </div>
+
+                        <div className="col-md-6">
+                            <label for="formGroupExampleInput" className="form-label">Criado por:</label>
+                            <input type="text" className="form-control" id="formGroupExampleInput"/>
+                        </div>
+
+                        <div className="col-md-6">
+                            <label for="formGroupExampleInput" className="form-label">Nome do jogo:</label>
+                            <input type="text" className="form-control" id="formGroupExampleInput"/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">Jogadores:</label>
+                            <select id="inputState" class="form-select">
+
+                                <option selected>Selecione</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+
+                            </select>
+                        </div>
+
+                        <div className="col-md-6">
+                            <label for="formGroupExampleInput" className="form-label">Disponibilidade:</label>
+                            <input type="datetime-local" className="form-control" id="formGroupExampleInput"/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">Bairro</label>
+                            <select id="inputState" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>Bairro1</option>
+                            <option>Bairro2</option>
+                            </select>
+                        </div>
+
+                        <div className="col-md-6">
+                            <label for="formGroupExampleInput" className="form-label">Endereço:</label>
+                            <input type="text" className="form-control" id="formGroupExampleInput"/>
+                        </div>
+   
                     </div>
 
-                    <div class="col">
+                    <div className="col">
+
                         <p>Descrição:</p>
-                            <form>
-                                <textarea>Informações adicionais sobre o seu grupo e o jogo </textarea>
-                            </form>
+                        <div className="input-group">
+                            <textarea className="form-control" aria-label="With textarea" placeholder='Informações adicionais sobre o seu grupo e o jogo' ></textarea>
+                        </div>
+                                                   
                         
-                        <p>Imagens:</p>
-                        <input type="file" accept="image/*" />
+                        <div className="mb-3">
+                            <label for="formFileMultiple" className="form-label">Imagens:</label>
+                            <input className="form-control" type="file" id="formFileMultiple" accept="image/*" multiple/>
+                        </div>
+                        
                         <div className='send-button'>
                             <button type="button" className="btn btn-light">Enviar</button>
                         </div>

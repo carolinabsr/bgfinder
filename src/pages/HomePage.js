@@ -1,19 +1,30 @@
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import teste from "../images/teste.png"
+import {Link} from 'react-router-dom'
 
 
 const HomePage = () => {
     return ( 
         <div className="HomePage">
-            <div className="container-fluid">
-                <h1>CRIE SEU PRÓPRIO GRUPO</h1>
-                <input type="text" placeholder="Buscar grupo"/>               
-            </div>
+
+
 
             <div className="container-fluid">
-                <h2>ENCONTRE SEU GRUPO</h2>              
+                
+                <h1><Link className='create-group' to='/group/create'> CRIE SEU PRÓPRIO GRUPO </Link></h1>
+
+                <div className="container-fluid">
+                    <h2>ENCONTRE SEU GRUPO</h2>              
+                </div>
+                
+                <form className="d-flex" role="search">
+                <input className="form-control me-2" type="search" placeholder="Buscar grupo" aria-label="Search"/>
+                <button className="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+
             </div>
+
             
             <div className="container text-center">
                 <div class="row">
