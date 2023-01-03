@@ -1,0 +1,33 @@
+.header-container {
+    background: #FFFFFF url("https://images.unsplash.com/photo-1650024520252-14bdf7a3f312?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") no-repeat fixed;
+    /* background-size: contain; */
+    object-fit: contain;
+    object-position: center;
+    padding: 200px;
+    margin:20px;
+    
+}
+
+
+
+.create-group {
+    color: #e5e7eb;
+    text-decoration: none;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 50px;
+    border:50px;
+    font-size: 50px;
+   
+     
+}
+
+.row{
+    padding: 100px;
+    margin:20px; 
+}
+
+.d-flex{
+    padding: 20px;
+}
+
