@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+import CarouselImage from '../components/Carousel'
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 
@@ -13,7 +14,8 @@ const CreateGroupPage = () => {
     return ( 
 
         <div className="CreateGroupPage">
-            <h1>CARROSSEL</h1>
+            <CarouselImage/>
+            
             <div className="container-fluid">
                 <h1>CRIE SEU GRUPO</h1>
             </div>
