@@ -1,5 +1,5 @@
-import {Link} from 'react-router-dom'
-import {useState, useEffect} from 'react'
+import {Link, useNavigate} from 'react-router-dom'
+import {useState} from 'react'
 import axios from 'axios'
 import CarouselImage from '../components/Carousel'
 
@@ -7,9 +7,37 @@ const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 
 const CreateGroupPage = () => {
 
-    const [groups, setGroups] = useState([])
+    const [groupName, setGroupName] = useState('')
+    const [adress, setAdress] = useState('')
+    const [createdBy, setCreatedBy] = useState('')
+    const [gameName, setGameName] = useState('')
+    const [playersRequired, setPlayersRequired] = useState(2)
+    const [availability, setAvailability] = useState([])
+    const [groupDescription, setGroupDescription] = useState('')
+    const [images, setImages] = useState([])
 
+    const navigate = useNavigate()
+    
 
+    const handleSubmit = e => {
+        e.preventDefault()
+
+        const newGroup = {
+            groupName,
+            createdBy,
+            gameName,
+            playersRequired,
+            availability,
+            groupDescription,
+            images
+        }
+
+        axios.post(`${apiURL}`, newGroup)
+        .then(response => {
+            navigate('/')
+        })
+        .catch(err => console.log(err))
+    }
 
     return ( 
 
@@ -21,28 +49,70 @@ const CreateGroupPage = () => {
             </div>
 
             <div className="container text-center">
-                <div class="row">
+                <div className="row">
+                <form onSubmit={ handleSubmit }>
 
                     <div className="col-6">
 
                         <div className="col-md-6">
-                            <label for="formGroupExampleInput" className="form-label">Nome do grupo:</label>
-                            <input type="text" className="form-control" id="formGroupExampleInput"/>
+                            <label htmlFor='groupName' className="form-label">Nome do grupo:</label>
+
+                            <input 
+                            type="text" 
+                            className="form-control" 
+                            id="groupName"
+                            value = {groupName}
+                            onChange= {e => setGroupName(e.target.value)}
+                            />
+
+                        </div>
+
+                       
+                        <div className="col-md-6">
+                            <label htmlFor='createdBy' className="form-label">Criado por:</label>
+
+                            <input 
+                            type="text" 
+                            className="form-control" 
+                            id="createdBy"
+                            value = {createdBy}
+                            onChange= {e => setCreatedBy(e.target.value)}
+                            />
+
+                        </div>
+
+
+                        <div className="col-md-6">
+                            <label htmlFor='gameName' className="form-label">Nome do jogo:</label>
+
+                            <input 
+                            type="text"
+                            className="form-control" 
+                            id="gameName"
+                            value = {gameName}
+                            onChange= {e => setGameName(e.target.value)}
+                            />
+
                         </div>
 
                         <div className="col-md-6">
-                            <label for="formGroupExampleInput" className="form-label">Criado por:</label>
-                            <input type="text" className="form-control" id="formGroupExampleInput"/>
+                            <label htmlFor='playersRequired' className="form-label">Jogadores necessários:</label>
+
+                            <input 
+                            type="number"
+                            className="form-control" 
+                            id="playersRequired"
+                            value = {playersRequired}
+                            onChange= {e => setPlayersRequired(e.target.value)}
+                            />
+
                         </div>
 
-                        <div className="col-md-6">
-                            <label for="formGroupExampleInput" className="form-label">Nome do jogo:</label>
-                            <input type="text" className="form-control" id="formGroupExampleInput"/>
-                        </div>
 
-                        <div class="col-md-6">
-                            <label for="inputState" class="form-label">Jogadores:</label>
-                            <select id="inputState" class="form-select">
+                        {/* <div className="col-md-6">
+                            <label htmlFor='playersRequired' className="form-label">Jogadores necessários:</label>
+                            <select id="inputState" className="form-select" value = {playersRequired}
+                            onChange= {e => setPlayersRequired(e.target.value)} >
 
                                 <option selected>Selecione</option>
                                 <option>1</option>
@@ -56,48 +126,80 @@ const CreateGroupPage = () => {
                                 <option>9</option>
                                 <option>10</option>
 
+                            
+
                             </select>
-                        </div>
+                        </div> */}
+
 
                         <div className="col-md-6">
-                            <label for="formGroupExampleInput" className="form-label">Disponibilidade:</label>
-                            <input type="datetime-local" className="form-control" id="formGroupExampleInput"/>
+                            <label htmlFor='availability' className="form-label">Disponibilidade:</label>
+                            
+                            <input 
+                            type="datetime-local" 
+                            className="form-control" 
+                            id="availability"
+                            value = {availability}
+                            onChange= {e => setAvailability(e.target.value)}
+                            />
+
                         </div>
 
-                        <div class="col-md-6">
-                            <label for="inputState" class="form-label">Bairro</label>
-                            <select id="inputState" class="form-select">
-                            <option selected>Choose...</option>
-                            <option>Bairro1</option>
-                            <option>Bairro2</option>
-                            </select>
-                        </div>
 
                         <div className="col-md-6">
-                            <label for="formGroupExampleInput" className="form-label">Endereço:</label>
-                            <input type="text" className="form-control" id="formGroupExampleInput"/>
+                            <label htmlFor='adress' className="form-label">Endereço:</label>
+
+                            <input 
+                            type="text"
+                            className="form-control" 
+                            id="adress"
+                            value = {adress}
+                            onChange= {e => setAdress(e.target.value)}
+                            />
+
                         </div>
    
                     </div>
 
                     <div className="col">
 
-                        <p>Descrição:</p>
+                        <label htmlFor='groupDescription' className="form-label">Descrição:</label>
                         <div className="input-group">
-                            <textarea className="form-control" aria-label="With textarea" placeholder='Informações adicionais sobre o seu grupo e o jogo' ></textarea>
+
+                            <textarea 
+                            className="form-control"
+                            id="groupDescription"
+                            aria-label="With textarea" 
+                            placeholder='Informações adicionais sobre o seu grupo e o jogo' 
+                            value = {groupDescription}
+                            onChange= {e => setGroupDescription(e.target.value)}
+                            />
+
+                        
                         </div>
                                                    
                         
                         <div className="mb-3">
-                            <label for="formFileMultiple" className="form-label">Imagens:</label>
-                            <input className="form-control" type="file" id="formFileMultiple" accept="image/*" multiple/>
+                            <label htmlFor='images' className="form-label">Imagens:</label>
+
+                            <input 
+                            className="form-control" 
+                            type="file" 
+                            id="formFileMultiple" 
+                            accept="image/*" 
+                            multiple
+                            value = {images}
+                            onChange= {e => setImages(e.target.value)}
+
+                            />
                         </div>
                         
                         <div className='send-button'>
-                            <button type="button" className="btn btn-light">Enviar</button>
+                            <button type="submit" className="btn btn-light">Enviar</button>
                         </div>
 
                     </div>
+                </form>
                 </div>
             </div>
 

@@ -6,7 +6,19 @@ const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 
 const EditGroupPage = () => {
 
-    const [groups, setGroups] = useState([])
+    const [groupName, setGroupName] = useState('')
+    const [adress, setAdress] = useState('')
+    const [createdBy, setCreatedBy] = useState('')
+    const [gameName, setGameName] = useState('')
+    const [playersRequired, setPlayersRequired] = useState(['number?*'])
+    const [availability, setAvailability] = useState('formato de hora')
+    const [groupDescription, setGroupDescription] = useState('')
+    const [images, setImages] = useState('input file')
+    
+
+    const handleSubmit = e => {
+        e.preventDefault()
+    }
 
 
 
@@ -17,21 +29,48 @@ const EditGroupPage = () => {
             <h1>CARROSSEL</h1>
             <div className="container-fluid">
                 <h1>EDITAR GRUPO</h1>
+                <form onSubmit={ handleSubmit }/>
             </div>
 
             <div className="container text-center">
                 <div class="row">
                     <div class="col-6">
-                        <p>Nome do grupo:</p>
-                        <input type='text'></input>
-                        <p>Criado por:</p>
-                        <input type='text'></input>
-                        <p>Nome do jogo:</p>
-                        <input type='text'></input>
-                        <p>Jogadores necessários :</p>
-                        <input type='number'></input>
-                        <p>Disponibilidade:</p>
-                        <input type='datetime-local'></input>
+
+                        <label htmlFor='groupName'>Nome do Grupo</label>
+                        <input 
+                            type='text'
+                            value = {groupName}
+                            onChange= {e => setGroupName(e.target.value)}
+                        />
+
+                        <label htmlFor='createdBy'>Criado por</label>
+                        <input 
+                            type='text'
+                            value = {createdBy}
+                            onChange= {e => setCreatedBy(e.target.value)}
+                        />
+
+                        <label htmlFor='gameName'>Nome do Jogo</label>
+                        <input 
+                            type='text'
+                            value = {gameName}
+                            onChange= {e => setGameName(e.target.value)}
+                        />
+
+                        <label htmlFor='playersRequired'>Jogadores necessários</label>
+                        <input 
+                            type='number'
+                            value = {playersRequired}
+                            onChange= {e => setPlayersRequired(e.target.value)}
+                        />
+
+                        <label htmlFor='availability'>Disponibilidade</label>
+                        <input 
+                            type='date-time-local'
+                            value = {availability}
+                            onChange= {e => setAvailability(e.target.value)}
+                        />
+
                     </div>
 
                     <div class="col">
