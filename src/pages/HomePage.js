@@ -1,11 +1,30 @@
 import axios from "axios";
-import { Routes, Route } from "react-router-dom";
 import teste from "../images/teste.png"
 import {Link} from 'react-router-dom'
+import {useState, useEffect} from 'react'
 import './HomePage.css';
+import { tokTypes } from "@babel/parser";
 
+const apiURL = 'https://ironrest.cyclic.app/bg_finder' 
 
 const HomePage = () => {
+
+    const [groups, setGroups] = useState([])
+    const [refresh, setRefresh] = useState(false)
+
+    useEffect(() => { 
+        axios.get(apiURL).then(response => {
+        setGroups(response.data)
+        }).catch(err => console.log(err))
+    }, [refresh])
+
+    const deleteGroup = groupId => {
+        axios.delete((apiURL)/`${groupId}`)
+        .then(response => {
+            setRefresh(!refresh)
+        })
+        .catch(err => console.log(err))
+    }
 
     return ( 
         <div className="HomePage">
@@ -29,8 +48,32 @@ const HomePage = () => {
             
             <div className="container text-center">
                 <div class="row">
-                <div class="col">
-                    <div className="card" style={{width: '18rem'}}>
+                
+                    
+                      {groups.map(group => {
+                            return (
+                                <div class="col">
+                                <div className="card" style={{width: '18rem'}}>
+                                    <img src={teste} className="card-img-top" alt="teste"/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">{group.groupName}</h5>
+                                        <p className="card-text">{group.groupDescription}</p>
+                                        <Link className="btn btn-primary" to= {`/group/${group._id}`}>Ver detalhes</Link>
+                                    </div>
+                                </div>
+                                </div>
+
+                            )
+                        })
+                      }
+                   
+                
+
+
+
+
+
+                    {/* <div className="card" style={{width: '18rem'}}>
                         <img src={teste} className="card-img-top" alt="teste"/>
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
@@ -57,9 +100,11 @@ const HomePage = () => {
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" className="btn btn-primary">Ver detalhes</a>
                         </div>
-                        </div>
+                        </div> */}
+
                 </div>
-            </div>
+                     
+                
         </div>
     
 
