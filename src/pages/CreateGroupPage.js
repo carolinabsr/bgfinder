@@ -28,6 +28,7 @@ const CreateGroupPage = () => {
             gameName,
             playersRequired,
             availability,
+            adress,
             groupDescription,
             images
         }

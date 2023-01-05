@@ -14,8 +14,8 @@ function App() {
       <Routes>
         <Route path='/' element={ <HomePage /> } />
         <Route path='/group/create' element={ <CreateGroupPage/> } /> 
-        <Route path='/group/edit' element= { <EditGroupPage/>} />
-        <Route path='/group/:id' element= { <GroupDetailPage />} />
+        <Route path='/group/edit/:groupId' element= { <EditGroupPage/>} />
+        <Route path='/group/:groupId' element= { <GroupDetailPage />} />
         <Route path='/*' element={ <ErrorPage/> } />
       </Routes>
     </div>
