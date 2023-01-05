@@ -18,13 +18,6 @@ const HomePage = () => {
         }).catch(err => console.log(err))
     }, [refresh])
 
-    const deleteGroup = groupId => {
-        axios.delete((apiURL)/`${groupId}`)
-        .then(response => {
-            setRefresh(!refresh)
-        })
-        .catch(err => console.log(err))
-    }
 
     return ( 
         <div className="HomePage">
@@ -55,11 +48,13 @@ const HomePage = () => {
                                 <div class="col">
                                 <div className="card" style={{width: '18rem'}}>
                                     <img src={teste} className="card-img-top" alt="teste"/>
+
                                     <div className="card-body">
                                         <h5 className="card-title">{group.groupName}</h5>
                                         <p className="card-text">{group.groupDescription}</p>
-                                        <Link className="btn btn-primary" to= {`/group/${group._id}`}>Ver detalhes</Link>
+                                        <Link className="btn btn-primary" to= {`/group/${group._id}`}>Ver mais</Link>
                                     </div>
+
                                 </div>
                                 </div>
 
