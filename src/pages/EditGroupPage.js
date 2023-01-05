@@ -1,6 +1,7 @@
-import {Link} from 'react-router-dom'
-import {useState, useEffect} from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
+
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 
@@ -14,10 +15,55 @@ const EditGroupPage = () => {
     const [availability, setAvailability] = useState('formato de hora')
     const [groupDescription, setGroupDescription] = useState('')
     const [images, setImages] = useState('input file')
+    const [loading, setLoading] = useState(true)
     
+    const { groupId } = useParams()
+    const navigate = useNavigate()
+    
+    useEffect (() => {
+        axios.get(`${apiURL}/${groupId}`)
+        .then(response => {
+            let {
+                groupName,
+                createdBy,
+                gameName,
+                playersRequired,
+                availability,
+                adress,
+                groupDescription,
+                images
+            } = response.data 
+                setGroupName(groupName)
+                setCreatedBy(createdBy)
+                setGameName(gameName)
+                setPlayersRequired(playersRequired)
+                setAvailability(availability)
+                setAdress(adress)
+                setGroupDescription(groupDescription)
+                setImages(images)
+                setLoading(false)
+        })
+    }, [groupId])
 
     const handleSubmit = e => {
         e.preventDefault()
+
+        const updateGroup = {
+            groupName,
+            createdBy,
+            gameName,
+            playersRequired,
+            availability,
+            adress,
+            groupDescription,
+            images
+        }
+
+        axios.put(`${apiURL}/${groupId}`, updateGroup)
+        .then(response => {
+            navigate('/') 
+        })
+        .catch(err => console.log(err))
     }
 
 
@@ -29,8 +75,10 @@ const EditGroupPage = () => {
             <h1>CARROSSEL</h1>
             <div className="container-fluid">
                 <h1>EDITAR GRUPO</h1>
-                <form onSubmit={ handleSubmit }/>
             </div>
+
+            {!loading && (
+                <form onSubmit={ handleSubmit }>
 
             <div className="container text-center">
                 <div class="row">
@@ -73,23 +121,44 @@ const EditGroupPage = () => {
 
                     </div>
 
-                    <div class="col">
-                        <p>Descrição:</p>
-                            <form>
-                                <textarea>Informações adicionais sobre o seu grupo e o jogo </textarea>
-                            </form>
+                    <div class="col">                     
+                                 
+                            
+                                <label htmlFor='groupDescription'>Descrição: </label>
+                                <p>
+                                    <textarea 
+                                    type='text'
+                                    value = {groupDescription}
+                                    onChange= {e => setGroupDescription(e.target.value)}
+                                    />
+                                </p>
+
+                                {/* <label htmlFor='images'>Galeria</label>
+                                <input 
+                                    type='file'
+                                    accept="image/*"
+                                    value = {images}
+                                    onChange= {e => setImages(e.target.value)}
+                                /> */}
                         
                         <p>Imagens:</p>
-                        <input type="file" accept="image/*" />
+                        <input 
+                        type="file" 
+                        accept="image/*" 
+                        // value = {images}
+                        // onChange= {e => setImages(e.target.value)}
+                        />
                         <div className='send-button'>
-                            <button type="button" className="btn btn-light">Enviar</button>
+                            <button type="submit" className="btn btn-light">Enviar</button>
                         </div>
+                        
 
                     </div>
                 </div>
             </div>
 
-
+            </form>
+                        )}
         </div>
 
     );
