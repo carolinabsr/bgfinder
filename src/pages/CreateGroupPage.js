@@ -108,30 +108,6 @@ const CreateGroupPage = () => {
 
                         </div>
 
-
-                        {/* <div className="col-md-6">
-                            <label htmlFor='playersRequired' className="form-label">Jogadores necessários:</label>
-                            <select id="inputState" className="form-select" value = {playersRequired}
-                            onChange= {e => setPlayersRequired(e.target.value)} >
-
-                                <option selected>Selecione</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-
-                            
-
-                            </select>
-                        </div> */}
-
-
                         <div className="col-md-6">
                             <label htmlFor='availability' className="form-label">Disponibilidade:</label>
                             
