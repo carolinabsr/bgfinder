@@ -7,11 +7,21 @@
     height: 400px;
     margin-top: 58px; 
     background-size: cover;
+<
+    margin-top: 60px;
+    padding: 60px;
+    /* border: red solid ; */
+    /* object-fit: contain;
+    object-position: center;
+    padding: 200px;
+    margin:20px; */
+
     
 }
 
 .display-4{
     padding-top: 90px;
+
     
 }
 
