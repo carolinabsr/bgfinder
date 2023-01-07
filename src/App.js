@@ -6,10 +6,11 @@ import EditGroupPage from './pages/EditGroupPage';
 import GroupDetailPage from './pages/GroupDetailPage';
 import Navbar from "./components/Navbar"
 import ErrorPage from './pages/ErrorPage';
+import Banner from './components/Banner';
 
 function App() {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <Navbar/>
       <Routes>
         <Route path='/' element={ <HomePage /> } />
