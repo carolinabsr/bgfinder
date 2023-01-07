@@ -14,7 +14,7 @@ const EditGroupPage = () => {
     const [playersRequired, setPlayersRequired] = useState(['number?*'])
     const [availability, setAvailability] = useState('formato de hora')
     const [groupDescription, setGroupDescription] = useState('')
-    const [images, setImages] = useState('input file')
+    const [image, setImage] = useState('input file')
     const [loading, setLoading] = useState(true)
     
     const { groupId } = useParams()
@@ -31,7 +31,7 @@ const EditGroupPage = () => {
                 availability,
                 adress,
                 groupDescription,
-                images
+                image
             } = response.data 
                 setGroupName(groupName)
                 setCreatedBy(createdBy)
@@ -40,7 +40,7 @@ const EditGroupPage = () => {
                 setAvailability(availability)
                 setAdress(adress)
                 setGroupDescription(groupDescription)
-                setImages(images)
+                setImage(image)
                 setLoading(false)
         })
     }, [groupId])
@@ -56,7 +56,7 @@ const EditGroupPage = () => {
             availability,
             adress,
             groupDescription,
-            images
+            image
         }
 
         axios.put(`${apiURL}/${groupId}`, updateGroup)
@@ -131,21 +131,12 @@ const EditGroupPage = () => {
                                     onChange= {e => setGroupDescription(e.target.value)}
                                     />
                                 </p>
-
-                                {/* <label htmlFor='images'>Galeria</label>
-                                <input 
-                                    type='file'
-                                    accept="image/*"
-                                    value = {images}
-                                    onChange= {e => setImages(e.target.value)}
-                                /> */}
                         
-                        <p>Imagens:</p>
+                        <p>Imagem:</p>
                         <input 
-                        type="file" 
-                        accept="image/*" 
-                        // value = {images}
-                        // onChange= {e => setImages(e.target.value)}
+                        type="text" 
+                        value = {image}
+                        onChange= {e => setImage(e.target.value)}
                         />
                         <div className='send-button'>
                             <button type="submit" className="btn btn-light">Enviar</button>
