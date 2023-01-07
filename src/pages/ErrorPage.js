@@ -6,7 +6,7 @@ const ErrorPage = () => {
         <div className="container">
         <h1>Página não encontrada</h1>
 
-        <img src= {errorImage} alt="imagem de erro"/>>>>>>>> main
+        <img src= {errorImage} alt="imagem de erro"/>
         </div>
      );
 }
