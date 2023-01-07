@@ -71,10 +71,9 @@ const EditGroupPage = () => {
     return ( 
 
         <div className="EditGroupPage">
-            <h1>NAVBAR</h1>
             <h1>CARROSSEL</h1>
             <div className="container-fluid">
-                <h1>EDITAR GRUPO</h1>
+                <h1>Edite seu grupo</h1>
             </div>
 
             {!loading && (
