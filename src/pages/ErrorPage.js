@@ -1,12 +1,12 @@
-import errorImage from "../images/page-not-found.png" 
+import errorImage from "../images/page-not-found.png"
+import './ErrorPage.css'
 
 
 const ErrorPage = () => {
     return ( 
         <div className="container">
         <h1>Página não encontrada</h1>
-
-        <img src= {errorImage} alt="imagem de erro"/>>>>>>>> main
+        <img src= {errorImage} class="img-fluid" alt="imagem de erro"/>
         </div>
      );
 }
