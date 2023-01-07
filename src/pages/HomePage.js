@@ -1,5 +1,4 @@
 import axios from "axios";
-import teste from "../images/teste.png"
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import './HomePage.css';
@@ -39,7 +38,7 @@ const HomePage = () => {
                                 <div class="col">
                                     <div className="card" style={{width: '18rem'}}>
                                         
-                                        <img src={teste} className="card-img-top" alt="teste"/>
+                                        <img src={group.image} className="card-img-top" alt="teste"/>
 
                                         <div className="card-body">
                                             <h5 className="card-title">{group.groupName}</h5>

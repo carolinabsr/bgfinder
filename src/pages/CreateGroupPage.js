@@ -14,7 +14,7 @@ const CreateGroupPage = () => {
     const [playersRequired, setPlayersRequired] = useState(2)
     const [availability, setAvailability] = useState([])
     const [groupDescription, setGroupDescription] = useState('')
-    const [images, setImages] = useState([])
+    const [image, setImage] = useState('https://images.unsplash.com/photo-1637120149073-54319e6f9fc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')
 
     const navigate = useNavigate()
     
@@ -30,7 +30,7 @@ const CreateGroupPage = () => {
             availability,
             adress,
             groupDescription,
-            images
+            image
         }
 
         axios.post(`${apiURL}`, newGroup)
@@ -157,16 +157,14 @@ const CreateGroupPage = () => {
                                                    
                         
                         <div className="mb-3">
-                            <label htmlFor='images' className="form-label">Imagens:</label>
+                            <label htmlFor='image' className="form-label">Imagem:</label>
 
                             <input 
                             className="form-control" 
-                            type="file" 
-                            id="formFileMultiple" 
-                            accept="image/*" 
-                            multiple
-                            value = {images}
-                            onChange= {e => setImages(e.target.value)}
+                            type="text" 
+                            id="image" 
+                            value = {image}
+                            onChange= {e => setImage(e.target.value)}
 
                             />
                         </div>
