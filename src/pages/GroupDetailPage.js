@@ -60,8 +60,7 @@ const GroupDetailPage = () => {
                                 <p>Disponibilidade: {group.availability}</p>
                                 <p>{group.groupDescription}</p>
 
-                                <img width={400} src= {group.images} className="img-thumbnail rounded float-start" alt="imagem do grupo"/>
-                                <img src= {teste} className="img-thumbnail rounded float-end" alt="teste"/>
+                                <img width={400} src= {group.image} className="img-thumbnail rounded float-start" alt="imagem do grupo"/>
                             </div>          
                         </div>    
                     </div>   
