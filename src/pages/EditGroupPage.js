@@ -1,6 +1,7 @@
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import CarouselImage from '../components/Carousel' 
 
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder'
@@ -71,7 +72,8 @@ const EditGroupPage = () => {
     return ( 
 
         <div className="EditGroupPage">
-            <h1>CARROSSEL</h1>
+            <CarouselImage/>
+
             <div className="container-fluid">
                 <h1>Edite seu grupo</h1>
             </div>
@@ -80,50 +82,61 @@ const EditGroupPage = () => {
                 <form onSubmit={ handleSubmit }>
 
             <div className="container text-center">
-                <div class="row">
+                <div className="row">
+                    
                     <div class="col-6">
 
-                        <label htmlFor='groupName'>Nome do Grupo</label>
-                        <input 
-                            type='text'
-                            value = {groupName}
-                            onChange= {e => setGroupName(e.target.value)}
-                        />
+                        <div className='col-md-6'>
+                            <label htmlFor='groupName'>Nome do Grupo</label>
+                            <input 
+                                type='text'
+                                value = {groupName}
+                                onChange= {e => setGroupName(e.target.value)}
+                            />
+                        </div>
 
-                        <label htmlFor='createdBy'>Criado por</label>
-                        <input 
-                            type='text'
-                            value = {createdBy}
-                            onChange= {e => setCreatedBy(e.target.value)}
-                        />
+                        <div className='col-md-6'>
+                            <label htmlFor='createdBy'>Criado por</label>
+                            <input 
+                                type='text'
+                                value = {createdBy}
+                                onChange= {e => setCreatedBy(e.target.value)}
+                            />
+                        </div>
 
-                        <label htmlFor='gameName'>Nome do Jogo</label>
-                        <input 
-                            type='text'
-                            value = {gameName}
-                            onChange= {e => setGameName(e.target.value)}
-                        />
+                        <div className='col-md-6'>
+                            <label htmlFor='gameName'>Nome do Jogo</label>
+                                <input 
+                                    type='text'
+                                    value = {gameName}
+                                    onChange= {e => setGameName(e.target.value)}
+                                />
+                        </div>
 
-                        <label htmlFor='playersRequired'>Jogadores necessários</label>
-                        <input 
-                            type='number'
-                            value = {playersRequired}
-                            onChange= {e => setPlayersRequired(e.target.value)}
-                        />
+                        <div className='col-md-6'>
+                            <label htmlFor='playersRequired'>Jogadores necessários</label>
+                                <input 
+                                    type='number'
+                                    value = {playersRequired}
+                                    onChange= {e => setPlayersRequired(e.target.value)}
+                                />
+                        </div>
 
-                        <label htmlFor='availability'>Disponibilidade</label>
-                        <input 
-                            type='date-time-local'
-                            value = {availability}
-                            onChange= {e => setAvailability(e.target.value)}
-                        />
+                        <div className='col-md-6'>
+                            <label htmlFor='availability'>Disponibilidade</label>
+                                <input 
+                                    type='date-time-local'
+                                    value = {availability}
+                                    onChange= {e => setAvailability(e.target.value)}
+                                />
+                        </div>
 
                     </div>
 
-                    <div class="col">                     
+                    <div className="col">                     
                                  
-                            
-                                <label htmlFor='groupDescription'>Descrição: </label>
+                    <div className='col-md-6'>    
+                            <label htmlFor='groupDescription'>Descrição: </label>
                                 <p>
                                     <textarea 
                                     type='text'
@@ -131,17 +144,20 @@ const EditGroupPage = () => {
                                     onChange= {e => setGroupDescription(e.target.value)}
                                     />
                                 </p>
+                    </div>
                         
-                        <p>Imagem:</p>
-                        <input 
-                        type="text" 
-                        value = {image}
-                        onChange= {e => setImage(e.target.value)}
-                        />
-                        <div className='send-button'>
-                            <button type="submit" className="btn btn-light">Enviar</button>
-                        </div>
-                        
+                    <div className='col-md-6'>
+
+                            <p>Imagem:</p>
+                                <input 
+                                type="text" 
+                                value = {image}
+                                onChange= {e => setImage(e.target.value)}
+                                />
+                                <div className='send-button'>
+                                    <button type="submit" className="btn btn-light">Enviar</button>
+                                </div>
+                    </div>    
 
                     </div>
                 </div>
