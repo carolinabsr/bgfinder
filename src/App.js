@@ -6,7 +6,7 @@ import EditGroupPage from './pages/EditGroupPage';
 import GroupDetailPage from './pages/GroupDetailPage';
 import Navbar from "./components/Navbar"
 import ErrorPage from './pages/ErrorPage';
-import Banner from './components/Banner';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path='/group/:groupId' element= { <GroupDetailPage />} />
         <Route path='/*' element={ <ErrorPage/> } />
       </Routes>
+      <Footer/>
     </div>
   );
 }
