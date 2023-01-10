@@ -13,8 +13,8 @@ const Banner = () => {
                             
                             <div className='container'>
                                 <h1 className="display-4">Olá jogadores!</h1>
-                                <p className="lead">Aqui você pode criar e encontrar seu grupo de boardgame.</p>
-                                <p>Crie seu próprio grupo e entre para comunidade boargamer.</p>
+                                <p className="lead">Conecte-se com jogadores de Board Games</p>
+                                <p>Crie seu próprio grupo e entre para comunidade boadrgamer.</p>
                                 <p className="lead">
                                 <Link to='/group/create' className="btn btn-outline-light">Criar grupo</Link>
                                 </p>
