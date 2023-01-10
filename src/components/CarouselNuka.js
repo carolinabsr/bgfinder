@@ -1,7 +1,6 @@
 import peopleImage from '../images/brooke-cagle-unsplash.jpg'
 import rpgImage from '../images/clint-bustrillos-unsplash.jpg'
 import boardImage from '../images/folu-eludire-unsplash.jpg'
-import 'react-multi-carousel/lib/styles.css';
 import './Carousel.css'
 import  Carousel  from 'nuka-carousel';
 
