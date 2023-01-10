@@ -1,7 +1,7 @@
 import {Link, useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import axios from 'axios'
-import CarouselImage from '../components/Carousel'
+import CarouselImage from '../components/CarouselNuka'
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 

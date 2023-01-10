@@ -1,7 +1,7 @@
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import CarouselImage from '../components/Carousel' 
+import CarouselImage from '../components/CarouselNuka' 
 
 
 
@@ -136,7 +136,7 @@ const EditGroupPage = () => {
                         <div className='col-md-6'>
                                 <label htmlFor='availability' className="form-label">Disponibilidade:</label>
                                 <input 
-                                    type='date-time-local'
+                                    type="datetime-local"
                                     className="form-control" 
                                     value = {availability}
                                     onChange= {e => setAvailability(e.target.value)}
@@ -193,6 +193,7 @@ const EditGroupPage = () => {
 
                             <div className='send-button'>
                                 <button type="submit" className="btn btn-light">Enviar</button>
+                                <Link className="btn btn-dark" to={`/group/${groupId}`}>Voltar</Link>
                             </div>
                     
                     </div>    
