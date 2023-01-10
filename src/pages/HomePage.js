@@ -2,8 +2,6 @@ import axios from "axios";
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import './HomePage.css';
-// import SearchGame from "../components/SearchGame.js"
-// import { tokTypes } from "@babel/parser";
 import Banner from "../components/Banner";
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder' 

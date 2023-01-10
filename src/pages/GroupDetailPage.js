@@ -1,7 +1,7 @@
 import {Link, useParams, useNavigate} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
-import Carousel from '../components/Carousel';
+import Carousel from '../components/CarouselNuka';
 import './GroupDetailPage.css';
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder'
