@@ -13,10 +13,10 @@ const EditGroupPage = () => {
     const [adress, setAdress] = useState('')
     const [createdBy, setCreatedBy] = useState('')
     const [gameName, setGameName] = useState('')
-    const [playersRequired, setPlayersRequired] = useState(['number?*'])
-    const [availability, setAvailability] = useState('formato de hora')
+    const [playersRequired, setPlayersRequired] = useState([])
+    const [availability, setAvailability] = useState([])
     const [groupDescription, setGroupDescription] = useState('')
-    const [image, setImage] = useState('input file')
+    const [image, setImage] = useState('')
     const [loading, setLoading] = useState(true)
     
     const { groupId } = useParams()

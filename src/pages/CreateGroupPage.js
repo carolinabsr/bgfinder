@@ -158,12 +158,12 @@ const CreateGroupPage = () => {
                                                    
                         
                         <div className="mb-3">
-                            <label htmlFor='image' className="form-label">Imagem:</label>
+                            <label htmlFor='image' className="form-label">URL da Imagem:</label>
 
                             <input 
                             className="form-control" 
                             type="text" 
-                            id="image" 
+                            id="image"
                             value = {image}
                             onChange= {e => setImage(e.target.value)}
 
