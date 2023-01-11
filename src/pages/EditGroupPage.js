@@ -1,7 +1,8 @@
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import CarouselImage from '../components/CarouselNuka' 
+import CarouselImage from '../components/CarouselNuka'
+import Swal from 'sweetalert2'
 
 
 
@@ -63,6 +64,13 @@ const EditGroupPage = () => {
 
         axios.put(`${apiURL}/${groupId}`, updateGroup)
         .then(response => {
+            Swal.fire({
+                position: 'top-middle',
+                icon: 'success',
+                title: 'Grupo editado com sucesso!',
+                showConfirmButton: false,
+                timer: 1000
+              })
             navigate('/') 
         })
         .catch(err => console.log(err))
