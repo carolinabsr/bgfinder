@@ -2,6 +2,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import axios from 'axios'
 import CarouselImage from '../components/CarouselNuka'
+import Swal from 'sweetalert2'
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 
@@ -35,6 +36,13 @@ const CreateGroupPage = () => {
 
         axios.post(`${apiURL}`, newGroup)
         .then(response => {
+            Swal.fire({
+                position: 'top-middle',
+                icon: 'success',
+                title: 'Grupo criado com sucesso!',
+                showConfirmButton: false,
+                timer: 1000
+              })
             navigate('/')
         })
         .catch(err => console.log(err))
