@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import axios from 'axios'
 import Carousel from '../components/CarouselNuka';
 import './GroupDetailPage.css';
+import Swal from 'sweetalert2'
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 
@@ -28,6 +29,13 @@ const GroupDetailPage = () => {
     const deleteGroup = groupId => {
         axios.delete(`${apiURL}/${groupId}`)
         .then(response => {
+            Swal.fire({
+                position: 'top-middle',
+                icon: 'success',
+                title: 'Grupo excluído',
+                showConfirmButton: false,
+                timer: 1000
+              })
             navigate('/')
             setRefresh(!refresh)
         })
