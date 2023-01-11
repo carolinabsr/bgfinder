@@ -9,13 +9,14 @@ const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 const HomePage = () => {
 
     const [groups, setGroups] = useState([])
-    const [refresh, setRefresh] = useState(false)
-
+    const [refresh] = useState(false)
+    
     useEffect(() => { 
         axios.get(apiURL).then(response => {
         setGroups(response.data)
         }).catch(err => console.log(err))
     }, [refresh])
+
 
     return ( 
 
@@ -50,6 +51,7 @@ const HomePage = () => {
                             )
                         })
                     }
+
 
                 </div>
                    
