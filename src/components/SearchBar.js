@@ -1,8 +1,4 @@
-import {useState} from 'react'
-
-const SearchGame = (props) => {
-
-    const {searchGames} = props
+const SearchBar = ({searchGames}) => {
 
     const handleSearch = e => {
          searchGames(e.target.value)
@@ -29,4 +25,4 @@ const SearchGame = (props) => {
 
 }
 
-export default SearchGame
+export default SearchBar

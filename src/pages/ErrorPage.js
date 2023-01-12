@@ -1,5 +1,4 @@
 import errorImage from "../images/page-not-found.png"
-import './ErrorPage.css'
 
 
 const ErrorPage = () => {

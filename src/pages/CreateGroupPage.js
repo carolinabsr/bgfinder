@@ -1,4 +1,4 @@
-import {Link, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import axios from 'axios'
 import CarouselImage from '../components/CarouselNuka'
@@ -59,8 +59,8 @@ const CreateGroupPage = () => {
                 <h1 className='h3 mt-2 mb-1'>Crie seu grupo</h1>
             </div>
 
-            <div className="container text-center">
-                <div className="row">
+            <div className="container text-center pt-1">
+                <div className="row pt-5">
                 <form onSubmit={ handleSubmit }>
 
                     <div className="col-6">
@@ -180,7 +180,7 @@ const CreateGroupPage = () => {
                         </div>
                         
                         <div className='send-button'>
-                            <button type="submit" className="btn btn-light">Enviar</button>
+                            <button type="submit" className="btn btn-success">Enviar</button>
                         </div>
 
                     </div>
