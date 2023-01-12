@@ -15,7 +15,7 @@ const CreateGroupPage = () => {
     const [playersRequired, setPlayersRequired] = useState(2)
     const [availability, setAvailability] = useState([])
     const [groupDescription, setGroupDescription] = useState('')
-    const [image, setImage] = useState('https://images.unsplash.com/photo-1637120149073-54319e6f9fc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')
+    const [image, setImage] = useState()
 
     const navigate = useNavigate()
     
@@ -31,7 +31,8 @@ const CreateGroupPage = () => {
             availability,
             adress,
             groupDescription,
-            image
+            image: image || "https://images.unsplash.com/photo-1637120149073-54319e6f9fc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+
         }
 
         axios.post(`${apiURL}`, newGroup)
