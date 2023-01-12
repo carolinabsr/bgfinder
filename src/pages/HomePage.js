@@ -9,11 +9,13 @@ const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 const HomePage = () => {
 
     const [groups, setGroups] = useState([])
+    const [groupSearch, setGroupSearch] = useState(groups)
     const [refresh] = useState(false)
     
     useEffect(() => { 
         axios.get(apiURL).then(response => {
         setGroups(response.data)
+        setGroupSearch(response.data)
         }).catch(err => console.log(err))
     }, [refresh])
 
@@ -25,14 +27,14 @@ const HomePage = () => {
         
         <div className="HomePage">
 
-            <Banner/>     
+            <Banner setGroupSearch = {setGroupSearch} groups = {groups}/>     
 
             
             <div className="container text-center">
                 <div class="row">
                 
                     
-                    {groups.map(group => {
+                    {groupSearch.map(group => {
                             return (
                                 <div class="col">
                                     <div className="card text-bg-light mb-3" style={{width: '18rem'}}>

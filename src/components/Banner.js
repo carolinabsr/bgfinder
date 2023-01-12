@@ -1,26 +1,23 @@
 import {Link} from 'react-router-dom';
 // import {useState} from 'react'
 import '../pages/HomePage.css';
-// import SearchGame from './SearchGame';
+import SearchGame from './SearchGame';
 
 
-const Banner = () => {
+const Banner = ({setGroupSearch, groups}) => {
 
-    // const Banner = ({groups}) => {
-
-    // const [groupsData, setGroupsFiltered] = useState(groups)
-    
-    // const searchGames = str => {
-    //     let filteredGroup 
+      const searchGames = str => {
         
-    //     filteredGroup= groupsData.filter(group => {
-    //         return group.gameName.toLowerCase().includes(str.toLowerCase())
-    //     })   
         
-    //     setGroupsFiltered(filteredGroup)
-    // }
-
-
+        let filteredGroup= groups.filter(group => {
+            return group.gameName.toLowerCase().includes(str.toLowerCase())
+        })   
+        
+        setGroupSearch(filteredGroup)
+        
+      }
+      
+      
     return ( 
 
             <div className="jumbotron jumbotron-fluid">
@@ -32,10 +29,10 @@ const Banner = () => {
                             <div className='container'>
                                 <h1 className="display-4">Olá jogadores!</h1>
                                 <p className="lead">Conecte-se com jogadores de Board Games</p>
-                                <p>Crie seu próprio grupo e entre para comunidade boadrgamer.</p>
+                                <p>Crie seu próprio grupo e entre para comunidade boardgamer.</p>
                                 <p className="lead">
                                 <Link to='/group/create' className="btn btn-outline-light">Criar grupo</Link>
-                                {/* <SearchGame searchGames={searchGames}/> */}
+                                <SearchGame searchGames={searchGames}/>
                                 </p>
                             </div> 
 
