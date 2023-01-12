@@ -1,7 +1,6 @@
 import {Link} from 'react-router-dom';
-// import {useState} from 'react'
 import '../pages/HomePage.css';
-import SearchGame from './SearchGame';
+import SearchBar from './SearchBar';
 
 
 const Banner = ({setGroupSearch, groups}) => {
@@ -32,7 +31,7 @@ const Banner = ({setGroupSearch, groups}) => {
                                 <p>Crie seu próprio grupo e entre para comunidade boardgamer.</p>
                                 <p className="lead">
                                 <Link to='/group/create' className="btn btn-outline-light">Criar grupo</Link>
-                                <SearchGame searchGames={searchGames}/>
+                                <SearchBar searchGames={searchGames}/>
                                 </p>
                             </div> 
 

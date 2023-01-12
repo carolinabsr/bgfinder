@@ -91,8 +91,8 @@ const EditGroupPage = () => {
             {!loading && (
                 
 
-            <div className="container text-center">
-                <div className="row">
+            <div className="container text-center pt-1">
+                <div className="row pt-5">
                 <form onSubmit={ handleSubmit }>
 
                     <div class="col-6">
@@ -200,8 +200,14 @@ const EditGroupPage = () => {
 
 
                             <div className='send-button'>
-                                <button type="submit" className="btn btn-light">Enviar</button>
-                                <Link className="btn btn-dark" to={`/group/${groupId}`}>Voltar</Link>
+                                <li className='list-inline-item'>
+                                    <li className='list-inline-item pt-3'>
+                                        <button type="submit" className="btn btn-success">Enviar</button>
+                                    </li>
+                                    <li className='list-inline-item'>
+                                        <Link className="btn btn-dark" to={`/group/${groupId}`}>Voltar</Link>
+                                    </li>
+                                </li>
                             </div>
                     
                     </div>    

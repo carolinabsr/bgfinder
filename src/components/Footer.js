@@ -10,7 +10,7 @@ const Footer = () => {
       
         
         <div className="text-center p-3" style={{backgroundColor: `rgba(${0}, ${0}, ${0}, ${0.2})`}}>
-          <p>© 2023 Feito por <spam>Carolina Barbosa e Raphael Lacerda</spam> </p> 
+          <p>© 2023 <spam>Carolina Barbosa & Raphael Lacerda</spam> </p> 
           <p>Créditos:  
             <spam> <Link to="https://mdbootstrap.com/" className="text-white">MDBootstrap.com</Link> | </spam>
             <spam><Link to="https://unsplash.com/" className="text-white">Unsplash.com</Link> | </spam>
