@@ -83,16 +83,19 @@ const EditGroupPage = () => {
         <div className="EditGroupPage">
             <CarouselImage/>
 
-            <div className="container-fluid">
-                <h1 className='h3 mt-2 mb-1'>Edite seu grupo</h1>
-                
+            <div className="py-6 bg-gray-100">
+                <div className= 'container-fluid'>
+                    <div className='text-center pb-lg-4 pt-5'>
+                        <h2 className='h2 mt-2 mb-1'>Edite seu grupo</h2>
+                    </div>
+                </div>
             </div>
 
             {!loading && (
                 
 
             <div className="container text-center pt-1">
-                <div className="row pt-5">
+                <div className="row pt-3">
                 <form onSubmit={ handleSubmit }>
 
                     <div class="col-6">
