@@ -3,6 +3,7 @@ import {useState} from 'react'
 import axios from 'axios'
 import CarouselImage from '../components/CarouselNuka'
 import Swal from 'sweetalert2'
+import './CreateGroupPage.css'
 
 const apiURL = 'https://ironrest.cyclic.app/bg_finder'
 
