@@ -36,7 +36,7 @@ const HomePage = () => {
                     
                     {groupSearch.map(group => {
                             return (
-                                <div class="col">
+                                <div className="col">
                                     <div className="card text-bg-light mb-3" style={{width: '18rem'}}>
                                         
                                         <img src={group.image} className="card-img-top" alt="teste"/>
