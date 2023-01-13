@@ -36,8 +36,10 @@ const HomePage = () => {
                     
                     {groupSearch.map(group => {
                             return (
+
                                 <div className="col mb-3">
                                     <div className="card text-bg-light" style={{width: '18rem'}}>
+
                                         
                                         <img src={group.image} className="card-img-top" alt="imagem do grupo" style={{maxHeight: '10rem', objectFit: 'cover'}}/>
 

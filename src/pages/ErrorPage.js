@@ -1,12 +1,19 @@
-import errorImage from "../images/page-not-found.png"
+import CarouselImage from '../components/CarouselNuka'
 
 
 const ErrorPage = () => {
     return ( 
         <div className="container">
-        <h1>Página não encontrada</h1>
+            <CarouselImage/>
+        
+        <div className="py-6 bg-gray-100">
+                <div className= 'container-fluid'>
+                    <div className='text-center pb-lg-4 pt-5'>
+                        <h1>Página não encontrada</h1>
+                    </div>
+                </div>
+        </div>
 
-        <img src= {errorImage} class="img-fluid" alt="imagem de erro"/>
 
      
 

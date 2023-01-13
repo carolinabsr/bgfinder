@@ -6,9 +6,9 @@ const SearchBar = ({searchGames}) => {
 
     return (
         
-        <div className='SearchGame lead'>
+        <div className='SearchGame'>
             
-            <form className="d-flex" role="search">
+            <form className="d-flex p-0 pt-2" role="search">
                 
             <input 
                 className="form-control me-2" 
