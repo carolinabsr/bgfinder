@@ -35,3 +35,35 @@
     padding: 20px;
 }
 
+.Banner h1{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+}
+
+.Banner h2{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.Banner p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21;
+    font-weight: 400;
+    
+}
+
+.card h5{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.card p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}

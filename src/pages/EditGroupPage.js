@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import CarouselImage from '../components/CarouselNuka'
 import Swal from 'sweetalert2'
+import './EditGroupPage.css'
 
 
 

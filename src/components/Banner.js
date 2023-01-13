@@ -19,7 +19,7 @@ const Banner = ({setGroupSearch, groups}) => {
       
     return ( 
 
-            <div className="jumbotron jumbotron-fluid">
+            <div className="Banner jumbotron jumbotron-fluid">
                 <div className='bg-image vw-100 vw-100'
                 style={{backgroundImage: `url("https://images.unsplash.com/photo-1650024520252-14bdf7a3f312?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")`}} alt='imagem de dados'>                
                 
@@ -27,7 +27,7 @@ const Banner = ({setGroupSearch, groups}) => {
                             
                             <div className='container'>
                                 <h1 className="display-4">Olá jogadores!</h1>
-                                <p className="lead">Conecte-se com jogadores de Board Games</p>
+                                <h2 className="lead">Conecte-se com jogadores de Board Games</h2>
                                 <p>Crie seu próprio grupo e entre para comunidade boardgamer.</p>
                                 <p className="lead">
                                 <Link to='/group/create' className="btn btn-outline-light">Criar grupo</Link>

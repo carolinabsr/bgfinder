@@ -1,3 +1,15 @@
 .img-thumbnail {
     width: 250px;
   }
+
+  .card-body h1{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card-body p{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card h4{
+    font-family: 'Montserrat', sans-serif; 
+  }
