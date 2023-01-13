@@ -31,9 +31,12 @@ const Banner = ({setGroupSearch, groups}) => {
                                 <p>Crie seu próprio grupo e entre para comunidade boardgamer.</p>
                                 <p className="lead">
                                 <Link to='/group/create' className="btn btn-outline-light">Criar grupo</Link>
-                                <SearchBar searchGames={searchGames}/>
+                                
                                 </p>
+                                <SearchBar searchGames={searchGames}/>
                             </div> 
+
+                            
 
                     </div>    
                 </div>

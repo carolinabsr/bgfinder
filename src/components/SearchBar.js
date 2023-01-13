@@ -6,7 +6,7 @@ const SearchBar = ({searchGames}) => {
 
     return (
         
-        <div className='SearchGame'>
+        <div className='SearchGame lead'>
             
             <form className="d-flex" role="search">
                 
