@@ -1,4 +1,3 @@
-import {Link} from 'react-router-dom'
 import { GithubFilled, LinkedinFilled } from '@ant-design/icons'
 
 const Footer = () => {
