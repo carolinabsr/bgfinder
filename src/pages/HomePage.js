@@ -31,15 +31,14 @@ const HomePage = () => {
 
             
             <div className="container text-center">
-                <div class="row">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4 mt-4">
                 
                     
                     {groupSearch.map(group => {
                             return (
 
-                                <div className="col mb-3">
-                                    <div className="card text-bg-light" style={{width: '18rem'}}>
-
+                                <div className="col">
+                                    <div className="card text-bg-light">
                                         
                                         <img src={group.image} className="card-img-top" alt="imagem do grupo" style={{maxHeight: '10rem', objectFit: 'cover'}}/>
 

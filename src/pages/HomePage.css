@@ -26,10 +26,10 @@
 
 
 
-.row{
+/* .row{
     padding: 100px;
     margin:20px; 
-}
+} */
 
 .d-flex{
     padding: 20px;
@@ -45,13 +45,14 @@
 .Banner h2{
     
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 4px;
 }
 
 .Banner p{
     font-family: 'Montserrat', sans-serif;
-    font-size: 21;
+    font-size: 18px;
     font-weight: 400;
     
 }

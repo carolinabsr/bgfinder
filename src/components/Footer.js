@@ -42,8 +42,8 @@ const Footer = () => {
           <p>© 2023 Créditos:  
             <spam> <a target="_blank" href="https://mdbootstrap.com/" className="text-white">MDBootstrap.com</a> | </spam>
             <spam> <a target="_blank" href="https://unsplash.com/" className="text-white">Unsplash.com</a> | </spam>
-            <spam> <a target="_blank" href="https://br.vexels.com/" className="text-white">Vexels.com</a></spam>
-            
+            <spam> <a target="_blank" href="https://br.vexels.com/" className="text-white">Vexels.com</a> | </spam>
+            <spam> <a target="_blank" href="https://ludopedia.com.br/" className="text-white">Ludopedia.com.br</a></spam>
       
       
           
