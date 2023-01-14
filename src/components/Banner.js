@@ -26,10 +26,9 @@ const Banner = ({setGroupSearch, groups}) => {
                     <div className="mask"style={{backgroundColor: `rgba(${0}, ${0}, ${0}, ${0.6})`}}>
                             
                             <div className='container'>
-                                <h2 className= "display-4 pt-5">ENTRE PARA COMUNIDADE BOARDGAMER</h2>
-                                <h1 className="lead">Conecte-se</h1>
-                                {/* <h2 className="lead">Conecte-se com jogadores de Board Games</h2> */}
-                                {/* <p>Encontre ou crie seu próprio grupo </p> */}
+                                
+                                <h1 className="display-4 pt-6">BG Finder</h1>
+                                <h2 className= "lead pt-3 pb-3">ENTRE PARA COMUNIDADE BOARDGAMER</h2>
                                 <p className="lead">
                                 <Link to='/group/create' className="btn btn-outline-light">Criar grupo</Link>
                                 
