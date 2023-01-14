@@ -68,7 +68,7 @@ const GroupDetailPage = () => {
                                                 <p className='mb-2 mb-sm-0'> {group.adress}</p>
                                                 <p className='mb-2 mb-sm-0'>{group.gameName}</p>                                    
                                                 <p className='mb-2 mb-sm-0'> <spam>{group.playersRequired} jogadores necessários </spam></p>
-                                                <p className='mb-2 mb-sm-0'> Disponibilidade: <span>{new Date (group.availability).toLocaleDateString('pt-br')}</span></p>                                          
+                                                <p className='mb-2 mb-sm-0'> Disponibilidade: <span>{new Date (group.availability).toLocaleString('pt-br')}</span></p>                                          
                                                 
                                                 <li className='list-inline-item pt-3'>
                                                     <Link className="btn btn-dark" to={`/group/edit/${group._id}`}>Editar</Link>
