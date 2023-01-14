@@ -13,7 +13,7 @@ const SearchBar = ({searchGames}) => {
             <input 
                 className="form-control me-2" 
                 type="text" 
-                placeholder="Buscar jogo e encontrar seu grupo" 
+                placeholder="Buscar jogo e encontrar grupo" 
                 aria-label="Search"
                 onChange={handleSearch}
                 />
